@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.container {
+  padding: 5% 10%;
+}
+
+.books-container {
+  background: #fceded;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+h3 {
+  margin-bottom: 20px;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px 30px;
+}
+
+button {
+  padding: 10px 30px;
+  margin-bottom: 20px;
+}
