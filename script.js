@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const bookContainer = document.querySelector('.books-container');
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
@@ -26,7 +27,6 @@ function deleted(index) {
   bookUpload();
   localStorage.setItem('bookList', JSON.stringify(bookList));
 }
-deleted();
 
 window.onload = () => {
   if (localStorage.getItem('bookList')) {
