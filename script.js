@@ -35,12 +35,16 @@ window.onload = () => {
   bookUpload();
 };
 
-addBtn.addEventListener('click', () => {
+function addBook(){
   const books = {
     bookTitle: bookTitle.value,
     bookAuthor: bookAuthor.value,
   };
   bookList.push(books);
+};
+
+addBtn.addEventListener('click', () => {
+  addBook();
   bookUpload();
   localStorage.setItem('bookList', JSON.stringify(bookList));
 });
