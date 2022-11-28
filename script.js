@@ -35,13 +35,13 @@ window.onload = () => {
   bookUpload();
 };
 
-function addBook(){
+function addBook() {
   const books = {
     bookTitle: bookTitle.value,
     bookAuthor: bookAuthor.value,
   };
   bookList.push(books);
-};
+}
 
 addBtn.addEventListener('click', () => {
   addBook();
