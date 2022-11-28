@@ -7,7 +7,7 @@ let bookList = [];
 
 function bookUpload() {
   bookContainer.innerHTML = '';
-  for (let i = 0; i < bookList.length; i++) {
+  for (let i = 0; i < bookList.length; i += 1) {
     bookContainer.innerHTML += `
     <div class="books">
     <h3>${bookList[i].bookTitle}</h3>
@@ -26,6 +26,7 @@ function deleted(index) {
   bookUpload();
   localStorage.setItem('bookList', JSON.stringify(bookList));
 }
+deleted();
 
 window.onload = () => {
   if (localStorage.getItem('bookList')) {
