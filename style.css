@@ -9,7 +9,8 @@ body {
 }
 
 .container {
-  padding: 5% 10%;
+  width: 100%;
+  padding: 10% 10%;
 }
 
 h1 {
@@ -25,10 +26,20 @@ hr {
 }
 
 input {
-  padding: 10px 30px;
+  padding: 10px 54px;
 }
 
 button {
   padding: 10px 30px;
   margin-bottom: 20px;
+}
+
+.add-btn {
+  display: flex;
+  float: right;
+}
+
+.books {
+  display: flex;
+  justify-content: space-between;
 }
