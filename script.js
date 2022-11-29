@@ -6,45 +6,54 @@ const addBtn = document.querySelector('.add-btn');
 
 let bookList = [];
 
-function bookUpload() {
-  bookContainer.innerHTML = '';
-  for (let i = 0; i < bookList.length; i += 1) {
-    bookContainer.innerHTML += `
-    <div class="books">
-    <h3>${bookList[i].bookTitle}</h3>
-    <h3>${bookList[i].bookAuthor}</h3>
-    <button onclick="deleted(${i})">Remove</button>
-    <hr />
-  </div>
-   `;
-    bookTitle.value = '';
-    bookAuthor.value = '';
+class SingleBook {
+  constructor(title, author) {
+    this.title = title;
+    this.author = author;
   }
 }
 
-function deleted(index) {
-  bookList.splice(index, 1);
-  bookUpload();
-  localStorage.setItem('bookList', JSON.stringify(bookList));
+class DisplayBook {
+
+  static bookUpload() {
+    bookContainer.innerHTML = '';
+    for (let i = 0; i < bookList.length; i += 1) {
+      bookContainer.innerHTML += `
+      <div class="books">
+      <h3>${bookList[i].title}</h3>
+      <h3>${bookList[i].author}</h3>
+      <button onclick="DisplayBook.deleted(${i})">Remove</button>
+      <hr />
+    </div>
+     `;
+      bookTitle.value = '';
+      bookAuthor.value = '';
+    }
+  }
+
+  static deleted(index) {
+    bookList.splice(index, 1);
+    DisplayBook.bookUpload();
+    localStorage.setItem('bookList', JSON.stringify(bookList));
+  }
+
+  static addBook() {
+    const books =  new SingleBook(bookTitle.value, bookAuthor.value);
+    bookList.push(books);
+  }
+
 }
+
 
 window.onload = () => {
   if (localStorage.getItem('bookList')) {
     bookList = JSON.parse(localStorage.getItem('bookList'));
   }
-  bookUpload();
+  DisplayBook.bookUpload();
 };
 
-function addBook() {
-  const books = {
-    bookTitle: bookTitle.value,
-    bookAuthor: bookAuthor.value,
-  };
-  bookList.push(books);
-}
-
 addBtn.addEventListener('click', () => {
-  addBook();
-  bookUpload();
+  DisplayBook.addBook();
+  DisplayBook.bookUpload();
   localStorage.setItem('bookList', JSON.stringify(bookList));
 });
