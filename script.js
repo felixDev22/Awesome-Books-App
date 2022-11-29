@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable max-classes-per-file */
 const bookContainer = document.querySelector('.books-container');
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
@@ -14,17 +15,21 @@ class SingleBook {
 }
 
 class DisplayBook {
-
   static bookUpload() {
     bookContainer.innerHTML = '';
     for (let i = 0; i < bookList.length; i += 1) {
       bookContainer.innerHTML += `
       <div class="books">
-      <h3>${bookList[i].title}</h3>
-      <h3>${bookList[i].author}</h3>
-      <button onclick="DisplayBook.deleted(${i})">Remove</button>
-      <hr />
-    </div>
+        <div class ="book-wrapper"> 
+          <div class="book-holder">
+              <h3>"${bookList[i].title}"</h3>
+              <h3>by</h3>
+              <h3>${bookList[i].author}</h3>
+          </div>   
+          <button onclick="DisplayBook.deleted(${i})">Remove</button>
+        </div>   
+          <hr />
+      </div>
      `;
       bookTitle.value = '';
       bookAuthor.value = '';
@@ -38,12 +43,10 @@ class DisplayBook {
   }
 
   static addBook() {
-    const books =  new SingleBook(bookTitle.value, bookAuthor.value);
+    const books = new SingleBook(bookTitle.value, bookAuthor.value);
     bookList.push(books);
   }
-
 }
-
 
 window.onload = () => {
   if (localStorage.getItem('bookList')) {
