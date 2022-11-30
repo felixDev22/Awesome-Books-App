@@ -106,7 +106,6 @@ button {
 .contact-holder {
   margin: 5% 24% 0 24%;
   height: 60vh;
-  
 }
 
 .contact-header {
@@ -114,8 +113,8 @@ button {
   margin-bottom: 30px;
 }
 
-.contact-text  {
- font-size: larger;
+.contact-text {
+  font-size: larger;
 }
 
 .text-2 {
@@ -127,8 +126,8 @@ button {
   display: flex;
   flex-direction: column;
   border: none;
-  list-style:inside;
-  padding-left: 10px ;
+  list-style: inside;
+  padding-left: 10px;
   gap: 0;
   font-size: larger;
 }
@@ -141,7 +140,9 @@ button {
   display: none;
 }
 
-
+.block {
+  display: block;
+}
 
 footer {
   display: flex;
