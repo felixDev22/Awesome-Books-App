@@ -78,12 +78,12 @@ const formatAMPM = (date) => {
   return strTime;
 };
 
-let time = formatAMPM(new Date());
+const time = formatAMPM(new Date());
 const date = new Date();
-let day = date.getDate();
-let month = date.getMonth() + 1;
-let year = date.getFullYear();
-let currentDate = `${day}-${month}-${year}, ${time}`;
+const day = date.getDate();
+const month = date.getMonth() + 1;
+const year = date.getFullYear();
+const currentDate = `${day}-${month}-${year}, ${time}`;
 const newDate = document.getElementById('date');
 newDate.innerHTML = currentDate;
 
