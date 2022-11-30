@@ -11,8 +11,8 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  margin: 2% 10%;
-  padding: 2%;
+  margin: 2% 10% 1% 10%;
+  padding: 1%;
   border: gray solid;
   font-size: larger;
 }
@@ -36,8 +36,15 @@ ul li a {
   text-decoration: none;
 }
 
+.date {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 10%;
+}
+
 .container {
   margin: 0 20px;
+  height: 80vh;
 }
 
 .books-container {
@@ -95,6 +102,46 @@ form {
 button {
   padding: 1% 2%;
 }
+
+.contact-holder {
+  margin: 5% 24% 0 24%;
+  height: 60vh;
+  
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-text  {
+ font-size: larger;
+}
+
+.text-2 {
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  list-style:inside;
+  padding-left: 10px ;
+  gap: 0;
+  font-size: larger;
+}
+
+.contact-list li {
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+
 
 footer {
   display: flex;
