@@ -9,18 +9,64 @@
   </head>
   <body>
     <div class="container">
-      <h1>Awesome Books</h1>
-      <div class="books-container"></div>
+      <header>
+        <nav>
+          <div>Awesome Books</div>
+          <ul>
+            <li onclick="displayList()">
+              <a href="#Book-list">List</a>
+            </li>
+            <li onclick="displayNew()">
+              <a href="#Add-new">Add new</a>
+            </li>
 
-      <form action="">
-        <h2>Add new book</h2>
-        <input type="text" id="title" name="title" placeholder="Title" />
-        
-        <input type="text" id="author" name="author" placeholder="Author" />
-        
-        <button class="add-btn">Add</button>
-      </form>
+            <li class="contact" onclick="displayContact()">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="date"><p id="date"></p></div>
+
+      <section id="Book-list" class="hide block">
+        <h1>Awesome Books</h1>
+        <div class="books-container"></div>
+      </section>
+
+      <section id="Add-new" class="hide">
+        <form action="">
+          <h2 class="form-header">Add new book</h2>
+          <input type="text" id="title" name="title" placeholder="Title" />
+
+          <input type="text" id="author" name="author" placeholder="Author" />
+
+          <button class="add-btn">Add</button>
+        </form>
+      </section>
+
+      <section id="contact" class="hide">
+        <div class="contact-holder">
+          <div class="contact-header">
+            <h2>Contact Information</h2>
+          </div>
+
+          <div class="contact-text">
+            <p>Do you have any questions or you just want to say hello?</p>
+            <p class="text-2">You can reach out to us!</p>
+          </div>
+
+          <ul class="contact-list">
+            <li>Our email: felixnzomo@gmail.com</li>
+            <li>Our phone numbers: +254 731 432 340</li>
+            <li>Our address: Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </section>
     </div>
+    <footer>
+      <p>Copyright:</p>
+      <p>shegy28@outlook.com</p>
+    </footer>
 
     <script src="./script.js"></script>
   </body>

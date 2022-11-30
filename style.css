@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,46 @@
 
 body {
   margin: 0 auto;
+  font-family: 'open', sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 2% 10% 1% 10%;
+  padding: 1%;
+  border: gray solid;
+  font-size: larger;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+li {
+  border-right: gray solid 1px;
+  padding-right: 15px;
+}
+
+.contact {
+  border: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
+.date {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 10%;
 }
 
 .container {
   margin: 0 20px;
+  height: 80vh;
 }
 
 .books-container {
@@ -34,6 +72,7 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: xx-large;
 }
 
 h3 {
@@ -59,6 +98,10 @@ form {
   margin-top: 30px;
 }
 
+.form-header {
+  font-size: xx-large;
+}
+
 .add-btn {
   padding: 1% 2%;
   margin-left: 44%;
@@ -66,4 +109,55 @@ form {
 
 button {
   padding: 1% 2%;
+}
+
+.contact-holder {
+  margin: 5% 24% 0 24%;
+  height: 60vh;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: x-large;
+}
+
+.contact-text {
+  font-size: x-large;
+}
+
+.text-2 {
+  margin-left: 5px;
+  margin-bottom: 30px;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  list-style: inside;
+  padding-left: 10px;
+  gap: 0;
+  font-size: x-large;
+}
+
+.contact-list li {
+  border: none;
+}
+
+.hide {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 5%;
+  border: gray solid;
+  margin: 2% 10%;
+  gap: 20px;
 }

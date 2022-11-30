@@ -55,8 +55,51 @@ window.onload = () => {
   DisplayBook.bookUpload();
 };
 
-addBtn.addEventListener('click', () => {
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
   DisplayBook.addBook();
   DisplayBook.bookUpload();
   localStorage.setItem('bookList', JSON.stringify(bookList));
 });
+
+// generate date in a particular format
+
+const formatAMPM = (date) => {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  const ampm = hours >= 12 ? 'pm' : 'am';
+
+  hours %= 12;
+  hours = hours || 12;
+  minutes = minutes < 10 ? `0${minutes}` : minutes;
+
+  const strTime = `${hours}:${minutes} ${ampm}`;
+
+  return strTime;
+};
+
+const time = formatAMPM(new Date());
+const date = new Date();
+const day = date.getDate();
+const month = date.getMonth() + 1;
+const year = date.getFullYear();
+const currentDate = `${day}-${month}-${year}, ${time}`;
+const newDate = document.getElementById('date');
+newDate.innerHTML = currentDate;
+
+// add event listners
+function displayList() {
+  document.getElementById('Book-list').classList.add('block');
+  document.getElementById('Add-new').classList.remove('block');
+  document.getElementById('contact').classList.remove('block');
+}
+function displayNew() {
+  document.getElementById('Add-new').classList.add('block');
+  document.getElementById('Book-list').classList.remove('block');
+  document.getElementById('contact').classList.remove('block');
+}
+function displayContact() {
+  document.getElementById('contact').classList.add('block');
+  document.getElementById('Book-list').classList.remove('block');
+  document.getElementById('Add-new').classList.remove('block');
+}
