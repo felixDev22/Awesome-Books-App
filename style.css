@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,7 @@
 
 body {
   margin: 0 auto;
+  font-family: 'open',sans-serif;
 }
 
 nav {
@@ -69,6 +72,7 @@ ul li a {
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: xx-large;
 }
 
 h3 {
@@ -94,6 +98,10 @@ form {
   margin-top: 30px;
 }
 
+.form-header {
+  font-size: xx-large;
+}
+
 .add-btn {
   padding: 1% 2%;
   margin-left: 44%;
@@ -111,10 +119,11 @@ button {
 .contact-header {
   text-align: center;
   margin-bottom: 30px;
+  font-size: x-large;
 }
 
 .contact-text {
-  font-size: larger;
+  font-size: x-large;
 }
 
 .text-2 {
@@ -129,7 +138,7 @@ button {
   list-style: inside;
   padding-left: 10px;
   gap: 0;
-  font-size: larger;
+  font-size: x-large;
 }
 
 .contact-list li {
