@@ -66,11 +66,11 @@ addBtn.addEventListener('click', (e) => {
 
 const formatAMPM = (date) => {
   let hours = date.getHours();
-  let minutes = date.getMinutes();    
+  let minutes = date.getMinutes();
   const ampm = hours >= 12 ? 'pm' : 'am';
 
   hours %= 12;
-  hours = hours || 12;    
+  hours = hours || 12;
   minutes = minutes < 10 ? `0${minutes}` : minutes;
 
   const strTime = `${hours}:${minutes} ${ampm}`;
@@ -89,6 +89,17 @@ newDate.innerHTML = currentDate;
 
 // add event listners
 function displayList() {
-  document.getElementById('Add-new').classList.add('hide')
-  document.getElementById('contact').classList.add('hide')
+  document.getElementById('Book-list').classList.add('block');
+  document.getElementById('Add-new').classList.add('hide');
+  document.getElementById('contact').classList.add('hide');
+}
+function displayNew() {
+  document.getElementById('Add-new').classList.add('block');
+  document.getElementById('Book-list').classList.add('hide');
+  document.getElementById('contact').classList.add('hide');
+}
+function displayContact() {
+  document.getElementById('contact').classList.add('block');
+  document.getElementById('Book-list').classList.add('hide');
+  document.getElementById('Add-new').classList.add('hide');
 }
