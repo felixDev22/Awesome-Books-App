@@ -60,3 +60,34 @@ addBtn.addEventListener('click', () => {
   DisplayBook.bookUpload();
   localStorage.setItem('bookList', JSON.stringify(bookList));
 });
+
+// generate date in a particular format
+
+const formatAMPM = (date) => {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();    
+  const ampm = hours >= 12 ? 'pm' : 'am';
+
+  hours %= 12;
+  hours = hours || 12;    
+  minutes = minutes < 10 ? `0${minutes}` : minutes;
+
+  const strTime = `${hours}:${minutes} ${ampm}`;
+
+  return strTime;
+};
+
+let time = formatAMPM(new Date());
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+let currentDate = `${day}-${month}-${year}, ${time}`;
+const newDate = document.getElementById('date');
+newDate.innerHTML = currentDate;
+
+// add event listners
+function displayList() {
+  document.getElementById('Add-new').classList.add('hide')
+  document.getElementById('contact').classList.add('hide')
+}
