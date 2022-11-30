@@ -55,7 +55,8 @@ window.onload = () => {
   DisplayBook.bookUpload();
 };
 
-addBtn.addEventListener('click', () => {
+addBtn.addEventListener('click', (e) => {
+  e.preventDefault();
   DisplayBook.addBook();
   DisplayBook.bookUpload();
   localStorage.setItem('bookList', JSON.stringify(bookList));
