@@ -8,6 +8,34 @@ body {
   margin: 0 auto;
 }
 
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin:2% 10%;
+  padding: 2%;
+  border: gray solid;
+  font-size: larger;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+li {
+  border-right: gray solid 1px;
+ padding-right: 15px;
+}
+
+.contact {
+  border: none;
+}
+
+ul li a {
+  text-decoration: none;
+}
+
 .container {
   margin: 0 20px;
 }
